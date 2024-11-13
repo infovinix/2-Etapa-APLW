@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor01: #ffffff;
+    --cor02: #000000;
+    --cor03: #141414;
+    --cor04: #E50914;
+    --cor05: #B20710;
+    --cor06: #727272;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: var(--cor02);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: var(--cor01);
+    font-size: 40px;
+}
+
+p {
+    margin: 15px 0;
+}
+
+.navbar-brand .logo {
+    width: 50px;
+}
+
+.brand-name {
+    color: var(--cor01);
+    font-weight: bold;
+}
+
+nav {
+    color: var(--cor06);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link.active {
+    color: var(--cor01);
+    font-weight: 500;
+}
+
+.nav-link {
+    color: var(--cor01);
+    font-weight: 500;
+}
+
+.nome {
+    color: var(--cor04);
+    text-align: center;
+    padding: 12px;
+}
+
+h2 {
+    background-color: var(--cor03);
+}
+
+.fundonav {
+    background-color: var(--cor04);
+}
+
+nav > a {
+    text-decoration: none;
+    color: var(--cor01);
+    list-style-type: none;
+}
+
+.btn-primary {
+    background-color: var(--cor05);
+    border: 0;
+    border-radius: 30px;
+    width: 170px;
+    margin-top: 20px;
+}
+
+.btn-primary a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    border-radius: 30px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 36rem;
+}
+
+.coffee-img {
+    width: 500px;
+}
+
+.card-img-top {
+    width: 300px;
+    margin: auto;
+    padding: 15px;
+}
+
+.card:hover {
+    box-shadow: var(--cor02) 8px 8px 60px;
+}
+
+.card-body .btn-primary {
+    background-color: var(--cor05);
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 120px;
+}
+
+.footer {
+    background-color: var(--cor05);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer p {
+    padding-top: 15px;
+}
+
+main {
+    background-color: var(--cor02);
+    display: block;
+    margin: auto;
+    width: 900px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.intro-text h1 {
+    margin-bottom: 10px;
+}
+
+.intro-text .highlight {
+    color: var(--cor05);
+}
+
+.intro-text p {
+    margin: 0;
+}
+
+.movie-img {
+    width: 500px;
+}
+
+button a:hover {
+    text-decoration: none;
+    color: var(--cor04);
+}

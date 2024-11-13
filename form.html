@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Movie</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body class="container-fluid bg-dark">
+    <header class="container-fluid">
+        <nav class="row navbar bg-dark">
+            <a href="index.html" class="navbar-brand mb-0 h1 d-inline-flex align-items-center text-danger">
+                <span class="brand-name"><strong>CINE MOVIE</strong></span>
+            </a>
+            <ul class="nav ml-auto d-flex align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Sobre</a>
+                </li>
+                <li class="nav-item login">
+                    <a class="nav-link text-light bg-danger rounded" href="cadastro.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h3 class="col-md mb-4 text-center mt-5 text-light">Formulário de pagamento</h3>
+        <form name="orcamento" class="container-fluid" id="orcamento" onsubmit="return notificacao()">
+            <div class="form-group col-md-8 mr-auto ml-auto text-light">
+                <label for="inputNome">Nome</label>
+                <input type="text" name="nome" class="form-control" id="inputNome" placeholder="Seu nome" required>
+            </div>
+
+            <div class="form-group col-md-8 mr-auto ml-auto text-light">
+                <label for="telefone">Telefone</label>
+                <input type="telefone" class="form-control" id="telefone" name="telefone" placeholder="(xx)xxxxx-xxxx"
+                    maxlength="14" onkeypress="telefone(this)" onkeyup="salto(this.name,this.value)"
+                    onkeydown="return somente_numero(event)">
+            </div>
+
+            <div class="form-group col-md-8 mr-auto ml-auto text-light">
+                <label for="inputEndereco">Endereço</label>
+                <input type="text" class="form-control" id="inputEndereco" placeholder="Seu endereço" required>
+            </div>
+
+            <div class="form-group col-md-8 mr-auto ml-auto text-light">
+                <label for="inputPagamento">Pagamento</label>
+                <select id="inputPagamento" name="inputPagamento" class="form-control" onchange="abrir()">
+                    <option>Cartão de débito</option>
+                    <option value="Pix"> Pix </option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-8 mr-auto ml-auto mb-5 mt-5 border border-dark rounded p-3 text-light"
+                id="cartao">
+                <fieldset>
+                    <label for="numero"> Nº do Cartão </label>
+                    <input type="text" class="form-control" name="numero" id="numero"
+                        onkeydown="return somente_numero(event)" onkeypress="cartao(this)" maxlength="19"
+                        placeholder="xxxx xxxx xxxx xxxx" onkeyup="salto(this.name,this.value)" required>
+
+                    <label for="codigo"> Codigo de Segurança </label>
+                    <input type="text" class="form-control" name="codigo" onkeydown="return somente_numero(event)"
+                        maxlength="3" placeholder="xxx" onkeyup="salto(this.name,this.value)" required>
+
+                    <label for="vencimento"> Vencimento </label>
+                    <input type="text" class="form-control" name="vencimento" onkeydown="return somente_numero(event)"
+                        placeholder="MM/AA" maxlength="5" onkeypress="data(this)" required>
+                </fieldset>
+            </div>
+
+            <div class="form-group col-md-8 mr-auto ml-auto mb-5 mt-5 rounded p-3 text-light" id="pix" style="display: none;">
+                <label for="pix" class="bg-danger p-2 rounded m-2">Copiar código</label>
+                <input type="text" class="form-control m-2" value="HDIHFIHGIRGHGOH FJFRIGJIRJGIJGPRJGIR FRJGIRJGIRJGIRJGR FJOIRIJGJRGOIRJGI" name="pix">
+            </div>
+
+            <div class="form-group col-md-8 mr-auto ml-auto">
+                <button type="submit" class="btn btn-danger">Comprar</button>
+                <button type="button" class="btn btn-secondary"><a href="index.html"
+                        class="text-light">Cancelar</a></button>
+            </div>
+        </form>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

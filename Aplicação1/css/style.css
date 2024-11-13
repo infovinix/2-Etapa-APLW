@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor01:#ffffff;
+    --cor02:#000000;
+    --cor03:#141414;
+    --cor04:#E50914;
+    --cor05:#B20710;
+    --cor06:#727272;
+}
+
+body {
+    background-color: var(--cor02);
+}
+
+main {
+    background-color: var(--cor02);
+    color: var(--cor06);
+}
+
+.nome {
+    color: var(--cor04);
+    text-align: center;
+    padding: 12px;
+}
+
+h2 {
+    background-color: var(--cor03);
+}
+
+.fundonav {
+    background-color: var(--cor04);
+}
+
+nav {
+    color: var(--cor06);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#filmes {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 800px;
+    margin: auto;
+}
+
+.filme, .serie, .desenho {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 3px;
+}
+
+.carrinho {
+    margin-top: 10px;
+    text-align: center;
+    text-align: center;
+    font-size: 20px;
+}
+button {
+    padding: 4px;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.vazia {
+    background-color: #000000;
+    height: 70px;
+    width: 100%;
+}
+
+.filme1, .desenho1{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+/* .bcenter{
+    display: flex;
+    justify-content: center;
+} */
+.bselect {
+    background-color: var(--cor04);
+    border-radius: 12px;
+    color: var(--cor01);
+    font-size: 18px;
+    margin-top: 20px;
+    border: 0;
+}
